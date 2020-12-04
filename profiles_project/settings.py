@@ -25,7 +25,7 @@ SECRET_KEY = '@vid1zxq8s9pdc%is#v-bmg0^b3xkkg-v4b(27f_3mi0iibot8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['symaxx-profiles-api.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -135,3 +135,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'profiles_api.UserProfile'
+
+
+MEDIA_URL = '/media/'
+
+
+STATIC_ROOT = 'static'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+
+CKEDITOR_UPLOAD_PATH = "media/"
