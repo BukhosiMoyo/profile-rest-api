@@ -1,8 +1,12 @@
 from django.contrib import admin
 
-from profiles_api import models 
+from .models import UserProfile
+from .models import ProfileFeedItem
 
 
-admin.site.register(models.UserProfile)
+#admin.site.register(UserProfile)
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'is_active', 'is_staff')
 
-admin.site.register(models.ProfileFeedItem)
+admin.site.register(ProfileFeedItem)
