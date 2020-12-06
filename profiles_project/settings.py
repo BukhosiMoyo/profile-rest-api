@@ -141,8 +141,5 @@ AUTH_USER_MODEL = 'profiles_api.UserProfile'
 
 MEDIA_URL = '/media/'
 
-
 STATIC_ROOT = 'static'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
-
-CKEDITOR_UPLOAD_PATH = "media/"
